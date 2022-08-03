@@ -13,8 +13,8 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
+      - uses: actions/checkout@v2
       - name: Cache node modules
-        uses: actions/checkout@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
