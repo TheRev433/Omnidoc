@@ -1,0 +1,56 @@
+<div
+  #contentElementRef
+  class="content overflow-y-auto p-8"
+  infiniteScroll
+  [scrollWindow]="false"
+  (scrolled)="onScrolled()"
+>
+  <div class="w-full md:w-min">
+    <app-input
+      [label]="'Search artist'"
+      (valueChange)="onSearchChange($event)"
+    ></app-input>
+  </div>
+
+  <div
+    *ngIf="renderedArtistItems.length; else emptyState"
+    class="mt-4 grid grid-cols-2 justify-around gap-x-6 gap-y-6 text-sm font-bold text-white sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9"
+  >
+    <div
+      class="relative bg-[#181818] p-4 hover:bg-[#282828]"
+      *ngFor="let item of renderedArtistItems"
+    >
+      <ng-container
+        [ngTemplateOutlet]="artistItemRef"
+        [ngTemplateOutletContext]="{item}"
+      ></ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #artistItemRef let-item="item">
+  <div class="h-full">
+    <div class="relative">
+      <div class="pb-[100%]">
+        <div>
+          <img
+            class="absolute block h-full w-full rounded-full object-cover"
+            [src]="item.image || './../../../assets/empty.webp'"
+            [alt]="item.name"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 text-center">
+      <app-link
+        [ellipsis]="true"
+        [value]="item.name"
+        [route]="'album/' + item.id"
+      ></app-link>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #emptyState>
+  <app-empty-state [showNoResults]="query ? true : false"></app-empty-state>
+</ng-template>

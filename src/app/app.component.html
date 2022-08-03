@@ -1,0 +1,16 @@
+<div class="main w-full bg-[#121212]">
+  <nav mat-tab-nav-bar>
+    <a
+      *ngFor="let path of paths"
+      mat-tab-link
+      routerLinkActive
+      #routerLinkActiveRef="routerLinkActive"
+      [routerLink]="path.route"
+      [active]="routerLinkActiveRef.isActive"
+    >
+      {{ path.label }}
+    </a>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>

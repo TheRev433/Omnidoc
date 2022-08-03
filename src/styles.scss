@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+$height-main-content-outlet-with-tabs: '100vh - 49px';
+html{
+    body{
+        scrollbar-color: hsla(0,0%,100%,.3);
+        scrollbar-width: thin;
+    
+        ::-webkit-scrollbar{
+            height: 6px;
+            width: 6px;
+        }
+        ::-webkit-scrollbar-button,
+        &::-webkit-scrollbar-button {
+            background: hsla(0,0%,100%,.3);
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar-track-piece,
+        &::-webkit-scrollbar-track-piece {
+            background:hsla(0,0%,100%,.3);
+        }
+
+        ::-webkit-scrollbar-thumb,
+        &::-webkit-scrollbar-thumb {
+            background: hsla(0,0%,100%,.3);
+        }
+    }
+}
+
+.content{
+    height: calc(#{$height-main-content-outlet-with-tabs})
+}
+
+.mat-paginator-container{
+    justify-content: space-between !important;
+}
+.mat-paginator-range-label{
+    margin: 0px !important;
+}
+
+@screen  md
+{
+    .mat-paginator-container{
+        justify-content: flex-end !important;
+    }
+    .mat-paginator-range-label{
+        margin: 0 32px 0 24px !important;
+    }
+}
+

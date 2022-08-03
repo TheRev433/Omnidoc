@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "HookyQR.beautify",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "DominicVonk.parameter-hints",
+  ]
+}

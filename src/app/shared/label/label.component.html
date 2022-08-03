@@ -1,0 +1,9 @@
+<span
+  [title]="value"
+  class="mt-1"
+  [ngClass]="[
+    secondary ? 'text-xs text-[#b3b3b3]' : '',
+    ellipsis ? 'block overflow-hidden text-ellipsis whitespace-nowrap' : ''
+  ]"
+  >{{ value }}</span
+>

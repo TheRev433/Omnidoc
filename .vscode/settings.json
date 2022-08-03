@@ -1,0 +1,113 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#22D3EE66",
+    "titleBar.inactiveBackground": "#22D3EE33",
+    "statusBar.background": "#22D3EE66",
+    /* ••[2]•••••••••• PARAMETER HINTS ••••••••••••••• */
+    // https://marketplace.visualstudio.com/items?itemName=DominicVonk.parameter-hints
+    "parameterHints.hintForeground": "#656565",
+    "parameterHints.hintBackground": "#24232B"
+  },
+  "editor.wordWrapColumn": 80,
+  "editor.rulers": [80],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/dist": true,
+    "**/*.js": false,
+    "**/*.js.map": true,
+    "**/*.d.ts": true
+  },
+  /* ••[3]••••• Editor - HTML •••••••••• */
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.insertFinalNewline": true
+  },
+  /* ••[3]••••• Editor - TYPESCRIPT •••••••••• */
+  "[typescript]": {
+    "files.insertFinalNewline": true
+  },
+  /* ••[3]••••• Editor - SCSS •••••••••• */
+  "[scss]": {
+    "editor.defaultFormatter": "HookyQR.beautify",
+    "files.insertFinalNewline": true
+  },
+  /* ••[3]••••• Editor - JSON •••••••••• */
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  /* ••[3]••••• Editor - JSONC •••••••••• */
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  /* ••[3]••••• TYPESCRIPT •••••••••• */
+  // https://www.typescriptlang.org/docs/handbook/compiler-options.html
+  "typescript.validate.enable": true,
+  /* ••[3]••••• SCSS •••••••••• */
+  // Disabled to use STYLELINT only
+  "scss.validate": false,
+  /* ••[3]••••• LESS •••••••••• */
+  // Disabled to use STYLELINT only
+  "less.validate": false,
+  /* ••[3]••••• CSS •••••••••• */
+  // Disabled to use STYLELINT only
+  "css.validate": false,
+  // https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  // "editor.colorDecorators" must be enabled
+  "tailwindCSS.colorDecorators": true,
+  "tailwindCSS.showPixelEquivalents": true,
+  "tailwindCSS.rootFontSize": 16,
+  "tailwindCSS.validate": true,
+  /* ••[2]•••••••••• ESLINT ••••••••••••••• */
+  // https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+  // https://eslint.org/docs/user-guide/configuring
+  "eslint.options": {
+    // @sync os=windows
+    "overrideConfigFile": "C:\\Users\\humbe\\AppData\\Roaming\\nvm\\v16.13.2\\.eslintrcBlueRoster.js" // NOTE: Use you own path here
+    // @sync os=mac
+    // "overrideConfigFile": "//Users//summers//Google Drive//DEVELOPER//.eslintrc.js"
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": ["typescript", "javascript"],
+  /* ••[2]•••••••••• PRETTIER ••••••••••••••• */
+  // https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+  // https://prettier.io/docs/en/options.html
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": true,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.quoteProps": "as-needed",
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.bracketSpacing": true,
+  "prettier.arrowParens": "always",
+  /* ••[2]•••••••••• STYLELINT ••••••••••••••• */
+  // https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint
+  // https://stylelint.io/
+  // https://github.com/bjankord/stylelint-config-sass-guidelines
+  // https://github.com/hudochenkov/stylelint-order
+  // https://github.com/postcss/postcss#syntaxes
+  "stylelint.enable": true,
+  "stylelint.customSyntax": "postcss-scss",
+  "stylelint.validate": ["scss"],
+  "stylelint.stylelintPath": "C:\\Users\\humbe\\AppData\\Roaming\\nvm\\v16.13.2\\node_modules\\stylelint", // NOTE: Use you own path here
+  // @sync os=mac
+  // "stylelint.stylelintPath": "//usr//local//lib//node_modules//stylelint",
+  "stylelint.packageManager": "npm",
+  "stylelint.configFile": "C:\\Users\\humbe\\AppData\\Roaming\\Code\\User\\stylelint\\stylelintBlueRosterConfig.js",
+  "stylelint.configBasedir": "C:\\Users\\humbe\\AppData\\Roaming\\Code\\User\\stylelint\\stylelintBlueRosterConfig.js",
+  "stylelint.reportInvalidScopeDisables": true,
+  "stylelint.reportNeedlessDisables": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "cSpell.words": [
+    "iconfont"
+  ]
+}
