@@ -11,6 +11,7 @@ import {
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Subject, take } from 'rxjs';
 import { CommonUtilities } from '@src/app/services/common.utilities';
+import { environment } from '@src/environments/environment';
 import { Injectable } from '@angular/core';
 
 interface OptionsI {
@@ -27,11 +28,8 @@ export class SpotifyService {
 
   private readonly spotifyBaseApiUri: string = 'https://api.spotify.com/v1/';
 
-  private readonly client_id: string = '3eec1c6fc0744291ae6208647162ee85';
-  private readonly client_secret: string = 'c9ecd70c7dd14dafb5f4f41f33861ef1';
-
   private readonly encoded: string = btoa(
-    `${this.client_id}:${this.client_secret}`
+    `${environment.spotify_client_id}:${environment.spotify_client_secret}`
   );
 
   private get headers(): HttpHeaders {
